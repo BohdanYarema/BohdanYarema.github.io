@@ -1,91 +1,39 @@
-/* NAVBAR */
-
-const navbar = document.querySelector('.navbar');
-const burger = document.getElementById('burger');
-const mobileMenu = document.getElementById('mobileMenu');
-
-window.addEventListener('scroll', () => {
-    if(window.scrollY > 100){
-        navbar.classList.add('scrolled');
-    } else {
-        navbar.classList.remove('scrolled');
-    }
+window.addEventListener("load",()=>{
+    document.body.classList.add("loaded");
 });
 
-burger.addEventListener('click', () => {
-    burger.classList.toggle('active');
-    mobileMenu.classList.toggle('active');
-});
+const reveals=document.querySelectorAll(".reveal");
+const observer=new IntersectionObserver(entries=>{
+    entries.forEach(entry=>{
+        if(entry.isIntersecting){
+            entry.target.classList.add("active");
+        }
+    });
+},{threshold:0.15});
+reveals.forEach(el=>observer.observe(el));
 
-/* LIGHTBOX SWIPE */
+const lightbox=document.getElementById("lightbox");
+const lightboxImg=document.getElementById("lightbox-img");
 
-const images = document.querySelectorAll('.portfolio-grid img');
-const lightbox = document.getElementById('lightbox');
-const lightboxImg = document.getElementById('lightboxImg');
-
-let currentIndex = 0;
-let startX = 0;
-
-function showImage(index){
-    lightboxImg.style.opacity = 0;
-
-    setTimeout(() => {
-        lightboxImg.src = images[index].src;
-        lightboxImg.style.opacity = 1;
-    }, 150);
-
-    currentIndex = index;
-}
-
-images.forEach((img, index) => {
-    img.addEventListener('click', () => {
-        lightbox.classList.add('active');
-        showImage(index);
+document.querySelectorAll(".portfolio-item").forEach(item=>{
+    item.addEventListener("click",()=>{
+        lightboxImg.src=item.querySelector("img").src;
+        lightbox.classList.add("active");
     });
 });
 
-lightbox.addEventListener('click', (e) => {
-    if(e.target === lightbox){
-        lightbox.classList.remove('active');
-    }
+lightbox.addEventListener("click",()=>lightbox.classList.remove("active"));
+document.addEventListener("keydown",e=>{
+    if(e.key==="Escape") lightbox.classList.remove("active");
 });
 
-lightbox.addEventListener('touchstart', (e) => {
-    startX = e.touches[0].clientX;
-});
+window.addEventListener("scroll",()=>{
+    const scrollTop=window.scrollY;
+    const docHeight=document.body.scrollHeight - window.innerHeight;
+    const progress=(scrollTop/docHeight)*100;
+    document.querySelector(".progress-bar").style.width=progress+"%";
 
-lightbox.addEventListener('touchend', (e) => {
-    let diff = e.changedTouches[0].clientX - startX;
-
-    if(diff > 80){
-        currentIndex = (currentIndex - 1 + images.length) % images.length;
-        showImage(currentIndex);
-    }
-    else if(diff < -80){
-        currentIndex = (currentIndex + 1) % images.length;
-        showImage(currentIndex);
-    }
-});
-
-lightbox.addEventListener('mousedown', (e) => {
-    startX = e.clientX;
-});
-
-lightbox.addEventListener('mouseup', (e) => {
-    let diff = e.clientX - startX;
-
-    if(diff > 80){
-        currentIndex = (currentIndex - 1 + images.length) % images.length;
-        showImage(currentIndex);
-    }
-    else if(diff < -80){
-        currentIndex = (currentIndex + 1) % images.length;
-        showImage(currentIndex);
-    }
-});
-
-document.addEventListener('keydown', (e) => {
-    if(e.key === 'Escape'){
-        lightbox.classList.remove('active');
-    }
+    document.querySelectorAll(".parallax img").forEach(img=>{
+        img.style.transform=`translateY(${scrollTop*0.15}px)`;
+    });
 });

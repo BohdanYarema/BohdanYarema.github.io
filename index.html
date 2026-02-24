@@ -3,115 +3,153 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Оля Колле — Curl Identity</title>
+    <title>Curl Identity — Olga Kolle</title>
 
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
 
-<!-- NAVBAR -->
-<nav class="navbar">
-    <div class="nav-container">
-        <div class="logo">OLGA KOLLE</div>
+<body class="preload">
 
-        <div class="nav-actions">
-            <a href="#" class="nav-cta">Записатись</a>
+<div class="progress-bar"></div>
+<div class="noise"></div>
 
-            <div class="burger" id="burger">
-                <span></span>
-                <span></span>
+<header class="hero">
+    <div class="hero-left">
+
+        <div class="top-line">
+            <span class="brand">OLGA KOLLE</span>
+            <div class="line"></div>
+        </div>
+
+        <div class="hero-center reveal">
+            <h1 class="hero-title">
+                <span class="curl">CURL</span>
+                <span class="identity">IDENTITY</span>
+            </h1>
+
+            <div class="hero-text">
+                <div class="vertical-line"></div>
+                <div>
+                    <p><strong>Оля Колле</strong> — парикмахер-стиліст у Києві.</p>
+                    <p class="italic">Я не виправляю кучері. Я розкриваю їх.</p>
+                </div>
+            </div>
+
+            <a href="#" class="hero-btn">Записатись →</a>
+
+            <div class="services-row">
+                Завивка — Стрижка — Фарбування — Догляд
+            </div>
+        </div>
+
+        <div class="bottom-bar">
+            <span>KYIV · 2026</span>
+            <div class="bottom-links">
+                <a href="#">INSTAGRAM</a>
+                <a href="#">BOOK NOW</a>
             </div>
         </div>
     </div>
 
-    <div class="mobile-menu" id="mobileMenu">
-        <a href="#about">Про мене</a>
-        <a href="#services">Послуги</a>
-        <a href="#portfolio">Роботи</a>
-        <a href="#">Записатись</a>
+    <div class="hero-right parallax">
+        <img src="images/hero.jpg" alt="">
     </div>
-</nav>
-
-<!-- HERO -->
-<header class="split-hero">
-
-    <div class="side">
-        <img src="https://images.unsplash.com/photo-1605497788044-5a32c7078486?q=80&w=1200" alt="">
-        <div class="hero-text">
-            <h1>МІЙ<br>ВИБІР</h1>
-        </div>
-    </div>
-
-    <div class="side">
-        <img src="https://images.unsplash.com/photo-1605497788044-5a32c7078486?q=80&w=1200" alt="">
-        <div class="hero-text right">
-            <h1>КУЧЕРІ<br>БЕЗ<br>МІФІВ</h1>
-        </div>
-    </div>
-
 </header>
 
-<!-- MANIFEST -->
-<section class="manifest">
-    <h2>Я не виправляю кучері.<br>Я розкриваю їх.</h2>
-</section>
-
-<!-- ABOUT -->
-<section id="about" class="about">
-    <div class="about-container">
-        <div>
-            <h2>Оля Колле</h2>
-            <p>
-                Працюю з природною текстурою волосся.
-                Допомагаю жінкам прийняти свою форму
-                та зробити її головною частиною стилю.
-            </p>
-        </div>
-        <div>
-            <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?q=80&w=1200" alt="">
-        </div>
+<section class="services reveal">
+    <div class="services-header">
+        <h2>ПОСЛУГИ</h2>
     </div>
-</section>
-
-<!-- SERVICES -->
-<section id="services" class="services">
-    <h2>Послуги</h2>
 
     <div class="services-grid">
-        <div class="service"><span>01</span><h3>Завивка</h3><p>Текстура з характером.</p></div>
-        <div class="service"><span>02</span><h3>Стрижка кучерів</h3><p>Форма, що працює з природою.</p></div>
-        <div class="service"><span>03</span><h3>Фарбування</h3><p>Глибина та об’єм.</p></div>
-        <div class="service"><span>04</span><h3>Відновлення</h3><p>Делікатний догляд.</p></div>
+        <div class="service">
+            <h3>ЗАВИВКА</h3>
+            <p>Текстура з характером.</p>
+            <span class="service-number">01</span>
+        </div>
+        <div class="service">
+            <h3>СТРИЖКА КУЧЕРІВ</h3>
+            <p>Форма, що працює з природою.</p>
+            <span class="service-number">02</span>
+        </div>
+        <div class="service">
+            <h3>ФАРБУВАННЯ</h3>
+            <p>Глибина та об’єм.</p>
+            <span class="service-number">03</span>
+        </div>
+        <div class="service">
+            <h3>ВІДНОВЛЕННЯ</h3>
+            <p>Делікатний догляд.</p>
+            <span class="service-number">04</span>
+        </div>
     </div>
 </section>
 
-<!-- PORTFOLIO -->
-<section id="portfolio" class="portfolio">
-    <h2>Роботи</h2>
+<section class="portfolio">
+    <div class="portfolio-header reveal">
+        <h2>РОБОТИ</h2>
+    </div>
 
     <div class="portfolio-grid">
-        <img src="https://images.unsplash.com/photo-1580618672591-eb180b1a973f?q=80&w=1200" alt="">
-        <img src="https://images.unsplash.com/photo-1580618672591-eb180b1a973f?q=80&w=1200" alt="">
-        <img src="https://images.unsplash.com/photo-1580618672591-eb180b1a973f?q=80&w=1200" alt="">
-        <img src="https://images.unsplash.com/photo-1580618672591-eb180b1a973f?q=80&w=1200" alt="">
+        <div class="portfolio-item reveal">
+            <img src="images/photo4.png">
+            <div class="overlay">Soft Curls</div>
+        </div>
+        <div class="portfolio-item reveal">
+            <img src="images/photo2.png">
+            <div class="overlay">Natural Texture</div>
+        </div>
+        <div class="portfolio-item reveal">
+            <img src="images/photo3.png">
+            <div class="overlay">Volume Style</div>
+        </div>
+        <div class="portfolio-item reveal">
+            <img src="images/photo4.png">
+            <div class="overlay">Editorial Look</div>
+        </div>
     </div>
 </section>
 
-<!-- CTA -->
-<section class="cta">
+<div class="lightbox" id="lightbox">
+    <img id="lightbox-img">
+</div>
+
+<section class="cta reveal">
     <h2>Готова закохатись у свої кучері?</h2>
-    <a href="#">Записатись зараз</a>
+    <a href="#" class="cta-btn">Записатись зараз</a>
 </section>
 
-<footer>
-    © 2026 Olga Kolle — Kyiv
-</footer>
+<footer class="footer reveal">
+    <div class="footer-divider"></div>
 
-<!-- LIGHTBOX -->
-<div class="lightbox" id="lightbox">
-    <img class="lightbox-img" id="lightboxImg">
-</div>
+    <div class="footer-grid">
+        <div>
+            <h3>OLGA KOLLE</h3>
+            <p>Студія кучерів</p>
+        </div>
+        <div>
+            <h4>Адреса</h4>
+            <p>м. Київ<br>вул. Хрещатик, 12</p>
+        </div>
+        <div>
+            <h4>Контакти</h4>
+            <p>+38 (099) 000 00 00<br>hello@curlidentity.ua</p>
+        </div>
+        <div>
+            <h4>Соцмережі</h4>
+            <div class="footer-social">
+                <a href="#" class="social-icon">IG</a>
+                <a href="#" class="social-icon">TG</a>
+                <a href="#" class="social-icon">TT</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        © 2026 Curl Identity
+    </div>
+</footer>
 
 <script src="script.js"></script>
 </body>
