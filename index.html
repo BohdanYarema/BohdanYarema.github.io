@@ -3,107 +3,116 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Оля Колле — Curl Stylist Київ</title>
+    <title>Оля Колле — Curl Identity</title>
 
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<div class="floating-cta">
-    <a href="https://t.me/" target="_blank">Записатись</a>
-</div>
+<!-- NAVBAR -->
+<nav class="navbar">
+    <div class="nav-container">
+        <div class="logo">OLGA KOLLE</div>
 
-<header class="hero">
-    <div class="overlay"></div>
-    <div class="hero-content fade-in">
-        <h1>Оля Колле</h1>
-        <h2>Curl Stylist у Києві</h2>
-        <p>Створюю ahyєnni завивки та відкриваю потенціал природних кучерів</p>
-        <a href="https://www.instagram.com/zavivka_in_kyiv/" target="_blank" class="hero-link">Instagram</a>
+        <div class="nav-actions">
+            <a href="#" class="nav-cta">Записатись</a>
+
+            <div class="burger" id="burger">
+                <span></span>
+                <span></span>
+            </div>
+        </div>
     </div>
+
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="#about">Про мене</a>
+        <a href="#services">Послуги</a>
+        <a href="#portfolio">Роботи</a>
+        <a href="#">Записатись</a>
+    </div>
+</nav>
+
+<!-- HERO -->
+<header class="split-hero">
+
+    <div class="side">
+        <img src="https://images.unsplash.com/photo-1605497788044-5a32c7078486?q=80&w=1200" alt="">
+        <div class="hero-text">
+            <h1>МІЙ<br>ВИБІР</h1>
+        </div>
+    </div>
+
+    <div class="side">
+        <img src="https://images.unsplash.com/photo-1605497788044-5a32c7078486?q=80&w=1200" alt="">
+        <div class="hero-text right">
+            <h1>КУЧЕРІ<br>БЕЗ<br>МІФІВ</h1>
+        </div>
+    </div>
+
 </header>
 
-<section class="manifest fade-in">
-    <h2>Твої кучері — це не проблема.<br>Це твоя суперсила.</h2>
+<!-- MANIFEST -->
+<section class="manifest">
+    <h2>Я не виправляю кучері.<br>Я розкриваю їх.</h2>
 </section>
 
-<section class="services fade-in">
-    <h2>Послуги</h2>
-    <div class="service-grid">
-        <div class="card">
-            <span>01</span>
-            <h3>Завивка</h3>
-            <p>Текстура з характером і формою.</p>
-        </div>
-        <div class="card">
-            <span>02</span>
-            <h3>Стрижка кучерів</h3>
-            <p>Форма, що працює з природою.</p>
-        </div>
-        <div class="card">
-            <span>03</span>
-            <h3>Фарбування</h3>
-            <p>Глибина та об’єм кольору.</p>
-        </div>
-        <div class="card">
-            <span>04</span>
-            <h3>Відновлення</h3>
-            <p>Делікатний догляд без шкоди.</p>
-        </div>
-    </div>
-</section>
-
-<section class="portfolio fade-in">
-    <h2>Портфоліо</h2>
-    <div class="portfolio-grid">
-        <img src="images/work1.jpg" alt="">
-        <img src="images/work2.jpg" alt="">
-        <img src="images/work3.jpg" alt="">
-        <img src="images/work4.jpg" alt="">
-        <img src="images/work5.jpg" alt="">
-        <img src="images/work6.jpg" alt="">
-    </div>
-</section>
-
-<section class="about fade-in">
+<!-- ABOUT -->
+<section id="about" class="about">
     <div class="about-container">
-        <div class="about-image">
-            <img src="images/master.jpg" alt="">
+        <div>
+            <h2>Оля Колле</h2>
+            <p>
+                Працюю з природною текстурою волосся.
+                Допомагаю жінкам прийняти свою форму
+                та зробити її головною частиною стилю.
+            </p>
         </div>
-        <div class="about-text">
-            <h2>Про мене</h2>
-            <p>Працюю з текстурою волосся, яку багато хто не розуміє. Допомагаю прийняти природну форму та зробити її головним акцентом стилю.</p>
+        <div>
+            <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?q=80&w=1200" alt="">
         </div>
     </div>
 </section>
 
-<section class="cta fade-in">
+<!-- SERVICES -->
+<section id="services" class="services">
+    <h2>Послуги</h2>
+
+    <div class="services-grid">
+        <div class="service"><span>01</span><h3>Завивка</h3><p>Текстура з характером.</p></div>
+        <div class="service"><span>02</span><h3>Стрижка кучерів</h3><p>Форма, що працює з природою.</p></div>
+        <div class="service"><span>03</span><h3>Фарбування</h3><p>Глибина та об’єм.</p></div>
+        <div class="service"><span>04</span><h3>Відновлення</h3><p>Делікатний догляд.</p></div>
+    </div>
+</section>
+
+<!-- PORTFOLIO -->
+<section id="portfolio" class="portfolio">
+    <h2>Роботи</h2>
+
+    <div class="portfolio-grid">
+        <img src="https://images.unsplash.com/photo-1580618672591-eb180b1a973f?q=80&w=1200" alt="">
+        <img src="https://images.unsplash.com/photo-1580618672591-eb180b1a973f?q=80&w=1200" alt="">
+        <img src="https://images.unsplash.com/photo-1580618672591-eb180b1a973f?q=80&w=1200" alt="">
+        <img src="https://images.unsplash.com/photo-1580618672591-eb180b1a973f?q=80&w=1200" alt="">
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
     <h2>Готова закохатись у свої кучері?</h2>
-    <a href="https://t.me/" target="_blank" class="cta-btn">Записатись зараз</a>
+    <a href="#">Записатись зараз</a>
 </section>
 
 <footer>
-    <p>© 2026 Оля Колле — Київ</p>
+    © 2026 Olga Kolle — Kyiv
 </footer>
 
-<script>
-    const faders = document.querySelectorAll('.fade-in');
-    const appearOptions = { threshold: 0.2 };
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox">
+    <img class="lightbox-img" id="lightboxImg">
+</div>
 
-    const appearOnScroll = new IntersectionObserver(function(entries, observer) {
-        entries.forEach(entry => {
-            if (!entry.isIntersecting) return;
-            entry.target.classList.add('appear');
-            observer.unobserve(entry.target);
-        });
-    }, appearOptions);
-
-    faders.forEach(fader => {
-        appearOnScroll.observe(fader);
-    });
-</script>
-
+<script src="script.js"></script>
 </body>
 </html>
