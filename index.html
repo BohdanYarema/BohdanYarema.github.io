@@ -1,3 +1,109 @@
-<p>Hello world</p>
-<p>Public Version</p>
-<a href="https://bohdanyarema.github.io/">Link to my site</a>
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Оля Колле — Curl Stylist Київ</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="floating-cta">
+    <a href="https://t.me/" target="_blank">Записатись</a>
+</div>
+
+<header class="hero">
+    <div class="overlay"></div>
+    <div class="hero-content fade-in">
+        <h1>Оля Колле</h1>
+        <h2>Curl Stylist у Києві</h2>
+        <p>Створюю ahyєnni завивки та відкриваю потенціал природних кучерів</p>
+        <a href="https://www.instagram.com/zavivka_in_kyiv/" target="_blank" class="hero-link">Instagram</a>
+    </div>
+</header>
+
+<section class="manifest fade-in">
+    <h2>Твої кучері — це не проблема.<br>Це твоя суперсила.</h2>
+</section>
+
+<section class="services fade-in">
+    <h2>Послуги</h2>
+    <div class="service-grid">
+        <div class="card">
+            <span>01</span>
+            <h3>Завивка</h3>
+            <p>Текстура з характером і формою.</p>
+        </div>
+        <div class="card">
+            <span>02</span>
+            <h3>Стрижка кучерів</h3>
+            <p>Форма, що працює з природою.</p>
+        </div>
+        <div class="card">
+            <span>03</span>
+            <h3>Фарбування</h3>
+            <p>Глибина та об’єм кольору.</p>
+        </div>
+        <div class="card">
+            <span>04</span>
+            <h3>Відновлення</h3>
+            <p>Делікатний догляд без шкоди.</p>
+        </div>
+    </div>
+</section>
+
+<section class="portfolio fade-in">
+    <h2>Портфоліо</h2>
+    <div class="portfolio-grid">
+        <img src="images/work1.jpg" alt="">
+        <img src="images/work2.jpg" alt="">
+        <img src="images/work3.jpg" alt="">
+        <img src="images/work4.jpg" alt="">
+        <img src="images/work5.jpg" alt="">
+        <img src="images/work6.jpg" alt="">
+    </div>
+</section>
+
+<section class="about fade-in">
+    <div class="about-container">
+        <div class="about-image">
+            <img src="images/master.jpg" alt="">
+        </div>
+        <div class="about-text">
+            <h2>Про мене</h2>
+            <p>Працюю з текстурою волосся, яку багато хто не розуміє. Допомагаю прийняти природну форму та зробити її головним акцентом стилю.</p>
+        </div>
+    </div>
+</section>
+
+<section class="cta fade-in">
+    <h2>Готова закохатись у свої кучері?</h2>
+    <a href="https://t.me/" target="_blank" class="cta-btn">Записатись зараз</a>
+</section>
+
+<footer>
+    <p>© 2026 Оля Колле — Київ</p>
+</footer>
+
+<script>
+    const faders = document.querySelectorAll('.fade-in');
+    const appearOptions = { threshold: 0.2 };
+
+    const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+        entries.forEach(entry => {
+            if (!entry.isIntersecting) return;
+            entry.target.classList.add('appear');
+            observer.unobserve(entry.target);
+        });
+    }, appearOptions);
+
+    faders.forEach(fader => {
+        appearOnScroll.observe(fader);
+    });
+</script>
+
+</body>
+</html>
